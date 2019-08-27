@@ -34,6 +34,13 @@ module.exports = {
 			  ]
 			},
 			{
+			  title: '安装教程',
+              collapsable: false,
+			  children: [
+			    '/guide/tutorial/',
+			  ]
+			},
+			{
 			  title: '面试',
               collapsable: false,
 			  children: [
@@ -47,6 +54,15 @@ module.exports = {
               collapsable: false,
 			  children: [
 			    '/interview/interview1/',
+			  ]
+			},
+		],
+		'/tutorial/': [
+			{
+			  title: 'windows',
+              collapsable: false,
+			  children: [
+			    '/tutorial/powerdesigner/',
 			  ]
 			},
 		],
