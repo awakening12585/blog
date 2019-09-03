@@ -77,6 +77,13 @@ module.exports = {
 			    '/docker/docker3/',
 			  ]
 			},
+			{
+			  title: 'docker-compose',
+              collapsable: false,
+			  children: [
+			    '/docker/docker4/',
+			  ]
+			},
 		],
 	}
   }
