@@ -65,6 +65,13 @@ module.exports = {
 			    '/tutorial/powerdesigner/',
 			  ]
 			},
+			{
+			  title: 'linux',
+              collapsable: false,
+			  children: [
+			    '/tutorial/jdk/',
+			  ]
+			},
 		],
 		'/docker/': [
 			{
