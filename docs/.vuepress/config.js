@@ -34,6 +34,13 @@ module.exports = {
 			  ]
 			},
 			{
+			  title: 'docker',
+              collapsable: false,
+			  children: [
+				'/guide/docker/',
+			  ]
+			},
+			{
 			  title: '安装教程',
               collapsable: false,
 			  children: [
@@ -70,6 +77,8 @@ module.exports = {
               collapsable: false,
 			  children: [
 			    '/tutorial/jdk/',
+			    '/tutorial/maven/',
+			    '/tutorial/git/',
 			  ]
 			},
 		],
@@ -89,6 +98,14 @@ module.exports = {
               collapsable: false,
 			  children: [
 			    '/docker/docker4/',
+			  ]
+			},
+			{
+			  title: 'docker 部署',
+              collapsable: false,
+			  children: [
+			    '/docker/nginx/',
+			    '/docker/mysql/',
 			  ]
 			},
 		],
