@@ -21,7 +21,7 @@ module.exports = {
         items: [
           { text: 'GitHub地址', link: 'https://github.com/awakening12585' }
         ]
-      }        
+      }
     ],
 	sidebar:{
 		'/guide/': [
@@ -30,7 +30,6 @@ module.exports = {
               collapsable: false,
 			  children: [
 			    '/guide/markdown/',
-				'/guide/docker/',
 			  ]
 			},
 			{
@@ -52,6 +51,13 @@ module.exports = {
               collapsable: false,
 			  children: [
 			    '/guide/interview/',
+			  ]
+			},
+			{
+			  title: '前端',
+              collapsable: false,
+			  children: [
+			    '/guide/frontend/',
 			  ]
 			},
 		],
@@ -106,6 +112,25 @@ module.exports = {
 			  children: [
 			    '/docker/nginx/',
 			    '/docker/mysql/',
+				'/docker/mongodb/',
+				'/docker/confluence/',
+				'/docker/sbt-scala-play/',
+			  ]
+			},
+		],
+		'/frontend/': [
+			{
+			  title: 'nodeJs',
+              collapsable: false,
+			  children: [
+			    '/frontend/nrm/',
+			  ]
+			},
+			{
+			  title: 'vue-element-admin',
+              collapsable: false,
+			  children: [
+			    '/frontend/vue-element-admin1/',
 			  ]
 			},
 		],
