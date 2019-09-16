@@ -40,6 +40,13 @@ module.exports = {
 			  ]
 			},
 			{
+			  title: 'linux',
+              collapsable: false,
+			  children: [
+				'/guide/linux/',
+			  ]
+			},
+			{
 			  title: '安装教程',
               collapsable: false,
 			  children: [
@@ -97,6 +104,7 @@ module.exports = {
 			    '/docker/docker1/',
 			    '/docker/docker2/',
 			    '/docker/docker3/',
+			    '/docker/docker5/',
 			  ]
 			},
 			{
@@ -131,6 +139,22 @@ module.exports = {
               collapsable: false,
 			  children: [
 			    '/frontend/vue-element-admin1/',
+			  ]
+			},
+		],
+		'/linux/': [
+			{
+			  title: 'linux常见问题',
+              collapsable: false,
+			  children: [
+			    '/linux/linux1/',
+			  ]
+			},
+			{
+			  title: 'linux常用命令',
+              collapsable: false,
+			  children: [
+			    '/linux/linux2/',
 			  ]
 			},
 		],
