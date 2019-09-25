@@ -148,6 +148,7 @@ module.exports = {
               collapsable: false,
 			  children: [
 			    '/linux/linux1/',
+			    '/linux/linux3/',
 			  ]
 			},
 			{
