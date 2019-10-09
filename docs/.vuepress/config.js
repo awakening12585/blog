@@ -115,6 +115,13 @@ module.exports = {
 			  ]
 			},
 			{
+			  title: 'docker知识收集',
+              collapsable: false,
+			  children: [
+			    '/docker/docker6/',
+			  ]
+			},
+			{
 			  title: 'docker 部署',
               collapsable: false,
 			  children: [
