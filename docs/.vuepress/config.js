@@ -119,6 +119,7 @@ module.exports = {
               collapsable: false,
 			  children: [
 			    '/docker/docker6/',
+			    '/docker/docker7/',
 			  ]
 			},
 			{
