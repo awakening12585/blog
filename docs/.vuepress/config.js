@@ -67,6 +67,13 @@ module.exports = {
 			    '/guide/frontend/',
 			  ]
 			},
+			{
+			  title: 'python',
+              collapsable: false,
+			  children: [
+			    '/guide/python/',
+			  ]
+			},
 		],
 		'/interview/': [
 			{
@@ -164,6 +171,15 @@ module.exports = {
               collapsable: false,
 			  children: [
 			    '/linux/linux2/',
+			  ]
+			},
+		],
+		'/python/': [
+			{
+			  title: '基础学习',
+              collapsable: false,
+			  children: [
+			    '/python/python1/',
 			  ]
 			},
 		],
