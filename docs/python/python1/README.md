@@ -18,5 +18,68 @@
 1. 下载[破解文件](https://pan.baidu.com/s/1ps4_CGWt0gwnYklA7aUxxQ) 提取码: cgah 
 2. 把jetbrains-agent.jar放到bin目录下，其他目录也可以，目录不要出现中文
 3. 进入edit custom vm options
-4. 更改文件
-5. 保存关闭并重新打开软件
+![图片](/blog/images/python/1.png)
+![图片](/blog/images/python/2.png)
+![图片](/blog/images/python/3.png)
+![图片](/blog/images/python/4.png)
+4. 保存关闭并重新打开软件
+
+## 注释
+- 单行注释
+```bash
+# 注释内容
+```
+- 多行注释
+```bash
+"""
+    第一行注释
+    第二行注释
+    第三行注释
+"""
+或者 单引号也可以
+```
+## 变量
+### 数据类型
+Python中的数据类型很多，而且也允许我们自定义新的数据类型，我们先介绍几种常用的数据类型
+- 整形: Python中可以处理任意大小的整数（Python 2.x中有int和long两种类型的整数，但这种区分对Python来说意义不大，因此在Python 3.x中整数只有int这一种了），而且支持二进制（如0b100，换算成十进制是4）、八进制（如0o100，换算成十进制是64）、十进制（100）和十六进制（0x100，换算成十进制是256）的表示法
+- 浮点型: 浮点数也就是小数，之所以称为浮点数，是因为按照科学记数法表示时，一个浮点数的小数点位置是可变的，浮点数除了数学写法（如123.456）之外还支持科学计数法（如1.23456e2）
+- 字符串型: 字符串是以单引号或双引号括起来的任意文本，比如'hello'和"hello",字符串还有原始字符串表示法、字节字符串表示法、Unicode字符串表示法，而且可以书写成多行的形式（用三个单引号或三个双引号开头，三个单引号或三个双引号结尾）
+- 布尔型: 布尔值只有True、False两种值，要么是True，要么是False，在Python中，可以直接用True、False表示布尔值（请注意大小写），也可以通过布尔运算计算出来（例如3 < 5会产生布尔值True，而2 == 1会产生布尔值False）
+- 复数型: 形如3+5j，跟数学上的复数表示一样，唯一不同的是虚部的i换成了j。实际上，这个类型并不能算作常用类型，大家了解下就可以了
+
+### 变量命名
+- 硬性规则:
+  - 变量名由字母（广义的Unicode字符，不包括特殊字符）、数字和下划线构成，数字不能开头
+  - 大小写敏感（大写的a和小写的A是两个不同的变量）
+  - 不要跟关键字（有特殊含义的单词，后面会讲到）和系统保留字（如函数、模块等的名字）冲突
+- PEP 8要求:
+  - 用小写字母拼写，多个单词用下划线连接。
+  - 受保护的实例属性用单个下划线开头。
+  - 私有的实例属性用两个下划线开头
+## 变量使用
+```bash
+# int:整形
+num = 1
+print(type(num))
+# float: 浮点型
+num2 = 1.23
+print(type(num2))
+# str 字符串
+name = "力王张"
+print(type(name))
+# bool 布尔类型
+flag = True
+print(type(flag))
+# list:列表
+arr = [1,2,3,4]
+print(type(arr))
+# tuple:元组
+tupleTest = (1,'hello')
+print(type(tupleTest))
+# set:集合
+setTest = {1,2}
+print(type(setTest))
+# dict:字典
+mapTest = {'name':'张三','age':18}
+print(type(mapTest))
+```

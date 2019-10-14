@@ -180,6 +180,7 @@ module.exports = {
               collapsable: false,
 			  children: [
 			    '/python/python1/',
+			    '/python/python2/',
 			  ]
 			},
 		],
