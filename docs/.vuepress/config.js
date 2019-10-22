@@ -181,6 +181,10 @@ module.exports = {
 			  children: [
 			    '/python/python1/',
 			    '/python/python2/',
+			    '/python/python3/',
+			    '/python/python4/',
+			    '/python/python5/',
+			    '/python/python6/',
 			  ]
 			},
 		],

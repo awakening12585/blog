@@ -1,5 +1,5 @@
-# python 学习第一天
-## 安装python解释器
+# python 学习第一天 起步&变量
+## 安装python解释器 
 - [Python官方网站](https://www.python.org/downloads/)下载
 - 找到安装文件 Windows x86-64 executable installer 点击下载
 - 安装过程建议勾选“Add Python 3.x to PATH”（将Python 3.x添加到PATH环境变量）并选择自定义安装

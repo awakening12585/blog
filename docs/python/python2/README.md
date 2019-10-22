@@ -1,4 +1,4 @@
-# python学习第二天
+# python学习第二天 运算符&流程控制
 ## 格式化输出
 ### 格式化符号
 格式符号|转换
@@ -131,3 +131,105 @@ a=b=10
 and|x and y| True and False 返回False
 or|x or y| True or False 返回True
 not|not x| not False 返回True
+## if 控制语句
+### 语法
+```bash
+if 条件:
+    执行代码
+elif 条件:
+    执行代码
+else:
+    执行代码
+```
+### 示例demo
+百分制成绩转换为等级制成绩。
+> 要求：如果输入的成绩在90分以上（含90分）输出A；80分-90分（不含90分）输出B；70分-80分（不含80分）输出C；60分-70分（不含70分）输出D；60分以下输出E。
+```bash
+score = float(input('请输入成绩: '))
+if score >= 90:
+    grade = 'A'
+elif score >= 80:
+    grade = 'B'
+elif score >= 70:
+    grade = 'C'
+elif score >= 60:
+    grade = 'D'
+else:
+    grade = 'E'
+print('对应的等级是:', grade)
+```
+## 循环结构
+### while 循环
+#### 语法
+```bash
+while 条件:
+    重复执行代码
+else:
+    循环正常结束之后要执行的代码
+```
+> 所谓的else指的是循环正常结束之后要执行的代码,即如果是break终止循环的情况,else下方缩进的代码将不在执行
+#### 示例demo
+猜数字游戏:
+- 计算机出一个1~100之间的随机数由人来猜
+- 计算机根据人猜的数字分别给出提示大一点/小一点/猜对了
+```bash
+import random
+
+answer = random.randint(1, 100)
+counter = 0
+while True:
+    counter += 1
+    number = int(input('请输入: '))
+    if number < answer:
+        print('大一点')
+    elif number > answer:
+        print('小一点')
+    else:
+        print('恭喜你猜对了!')
+        break
+print('你总共猜了%d次' % counter)
+if counter > 7:
+    print('你的智商余额明显不足')
+```
+### for-in循环
+#### 语法
+```bash
+for 变量 in 序列:
+    执行代码
+else:
+    循环正常结束之后要执行的代码
+```
+> 所谓的else指的是循环正常结束之后要执行的代码,即如果是break终止循环的情况,else下方缩进的代码将不在执行
+#### 示例demo
+用for循环实现1~100求和
+```bash
+sum = 0
+for x in range(101):
+    sum += x
+print(sum)
+```
+需要说明的是上面代码中的range(101)可以用来构造一个从0到100的取值范围，这样就可以构造出一个整数的序列并用于循环中，例如：
+- range(101)可以产生一个0到100的整数序列。
+- range(1, 100)可以产生一个1到99的整数序列。
+- range(1, 100, 2)可以产生一个1到99的奇数序列，其中2是步长，即数值序列的增量。
+
+### 循环关键字
+- break : 终止它所在的循环
+- continue: 放弃本次循环后续的代码直接让循环进入下一轮
+#### 示例demo
+输入一个正整数判断它是不是素数:
+```bash
+from math import sqrt
+
+num = int(input('请输入一个正整数: '))
+end = int(sqrt(num))
+is_prime = True
+for x in range(2, end + 1):
+    if num % x == 0:
+        is_prime = False
+        break
+if is_prime and num != 1:
+    print('%d是素数' % num)
+else:
+    print('%d不是素数' % num)
+```
