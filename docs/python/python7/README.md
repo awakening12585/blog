@@ -31,15 +31,39 @@ print(set1)
 ### 删除
 - remove(): 删除集合中指定的数据,如果数据不存在则报错
 ```bash
-
+set1 = {10,20}
+set1.remove(10)
+# set1.remove(100) # KeyError: 100
+print(set1) # {20}
 ```
 
 - discard(): 删除集合中的指定数据,如果数据不存在也不会报错
 ```bash
-
+set1 = {10,20}
+set1.discard(100) # {10,20}
+set1.discard(10)
+print(set1) # {20}
 ```
 
 - pop: 随机删除,并返回删除的数据
 ```bash
+set1 = {20,10,30}
+print(set1) # {10, 20, 30}
+num = set1.pop()
+print(num) # 10
+print(set1) # {20, 30}
+```
 
+### 查找
+- in : 是否存在
+```bash
+set1 = {20,10,30}
+print(10 in set1) # True
+print(10 not in set1) # False
+```
+- not in : 是否不存在
+```bash
+set1 = {20,10,30}
+print(10 in set1) # True
+print(10 not in set1) # False
 ```
