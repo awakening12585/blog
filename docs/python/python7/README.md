@@ -16,7 +16,11 @@ print(set2) # set()
 ### 增加
 - add(): 添加一个数据
 ```bash
-
+set1 = {1, 3}
+# set1.add(4) # {1, 3, 4}
+# set1.add((1,2)) # {(1, 2), 1, 3, 4} //添加元组
+set1.add([1,2]) # TypeError: unhashable type: 'list'
+print(set1)
 ```
 - update(): 追加一个序列
 ```bash
