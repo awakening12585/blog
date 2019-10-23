@@ -186,6 +186,7 @@ module.exports = {
 			    '/python/python5/',
 			    '/python/python6/',
 			    '/python/python7/',
+			    '/python/python8/',
 			  ]
 			},
 		],
