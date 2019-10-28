@@ -40,6 +40,13 @@ module.exports = {
 			  ]
 			},
 			{
+			  title: 'mongodb',
+              collapsable: false,
+			  children: [
+				'/guide/mongodb/',
+			  ]
+			},
+			{
 			  title: 'linux',
               collapsable: false,
 			  children: [
@@ -187,6 +194,15 @@ module.exports = {
 			    '/python/python6/',
 			    '/python/python7/',
 			    '/python/python8/',
+			  ]
+			},
+		],
+		'/mongodb/': [
+			{
+			  title: '常见操作',
+              collapsable: false,
+			  children: [
+			    '/mongodb/mongodb1/',
 			  ]
 			},
 		],
