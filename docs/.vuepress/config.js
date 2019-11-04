@@ -134,6 +134,7 @@ module.exports = {
 			  children: [
 			    '/docker/docker6/',
 			    '/docker/docker7/',
+			    '/docker/docker8/',
 			  ]
 			},
 			{
