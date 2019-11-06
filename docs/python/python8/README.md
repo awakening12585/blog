@@ -123,12 +123,35 @@ print(list1) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 # 推导式实现
 list2 = [i for i in range(10)]
 print(list2) # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+# 带if的列表推导式
+list3 = [i for i in range(10) if i % 2 == 0]
+print(list3) # [0, 2, 4, 6, 8]
+#多for循环实现列表推导式
+list4 = [(i, j) for i in range(1,3) for j in range(3)]
+print(list4) # [(1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
 ```
 - 字典推导式
 ```bash
+# 字典推导式
+dict1 = {i: i*2 for i in range(3)}
+print(dict1) # {0: 0, 1: 2, 2: 4}
 
+# 将两个列表合并成一个字典
+list2 = ["name", "age"]
+list3 = ["张三", 13]
+dict2 = {list2[i]: list3[i] for i in range(len(list2))}
+print(dict2) # {'name': '张三', 'age': 13}
+
+# 提取字典中的目标数据
+dict4 = {"yuwen": 92, "yingyu": 80, "shuxu": 100}  # 获取分数在90一样的数据
+dict5 = {k: v for k, v in dict4.items() if v > 90}
+print(dict5) # {'yuwen': 92, 'shuxu': 100}
 ```
 - 集合推导式
 ```bash
-
+# 集合推导式
+list1 = [1, 2, 3, 3, 3]
+set1 = {i for i in list1}
+print(set1) # {1, 2, 3}
 ```
+ 
