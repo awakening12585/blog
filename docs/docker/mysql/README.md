@@ -14,10 +14,10 @@ cd /usr/local/docker/mysql
 ```bash
 version: '3.1'
 services:
-  mysql:
+  mysql-5.7.29:
     restart: always
-    image: mysql:5.7.22
-    container_name: mysql
+    image: "mysql:5.7.29"
+    container_name: "Mysql-5.7.29-Pro"
     ports:
       - 3306:3306
     environment:
@@ -40,26 +40,25 @@ services:
 ```bash
 version: '3.1'
 services:
-  db:
-    image: mysql
+  mysql-8.0.19:
+    container_name: "Mysql-8.0.19-Pro"
+    image: "mysql:8.0.19"
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 123456
+      TZ: Asia/Shanghai
     command:
       --default-authentication-plugin=mysql_native_password
       --character-set-server=utf8mb4
       --collation-server=utf8mb4_general_ci
       --explicit_defaults_for_timestamp=true
       --lower_case_table_names=1
+      --max_allowed_packet=128M;
     ports:
       - 3306:3306
     volumes:
       - ./data:/var/lib/mysql
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
+      - ./conf/my.cnf:/etc/mysql/my.cnf
 ```
 
 ## 启动

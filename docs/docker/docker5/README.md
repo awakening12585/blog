@@ -16,15 +16,17 @@ cp -R /var/lib/docker/* /data/lib/docker_data/
 ## 修改配置文件
 ```bash
 //如果对应的目录/文件不存在新建即可
-vim /etc/systemd/system/docker.service.d/devicemapper.conf
-//添加如下数据
-[Service]
-ExecStart=
-ExecStart=/usr/bin/dockerd --graph=/data/lib/docker_data
+vim /etc/docker/daemon.json
+//添加如下数据 data-root 默认地址
+{
+    "registry-mirrors": ["https://registry.docker-cn.com"],
+    "data-root": "/data/lib/docker_data"
+}
+
 ```
 ## 使配置生效
 ```bash
-systemctl daemon-reload
+systemctl daemon-reloadreload
 ```
 ## 重启docker
 ```bash

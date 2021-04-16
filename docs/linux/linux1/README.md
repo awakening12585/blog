@@ -71,3 +71,37 @@ netplan apply
 ```flow js
 ping www.baidu.com
 ```
+## centos7
+```flow js
+# 进入网络配置文件目录
+cd  /etc/sysconfig/network-scripts/
+
+# 编辑配置文件，添加修改以下内容
+vi  ifcfg-eno16777736  
+
+# 编辑配置文件，添加修改以下内容
+HWADDR=00:0C:29:8D:24:73
+TYPE=Ethernet
+BOOTPROTO=static  #启用静态IP地址
+DEFROUTE=yes
+PEERDNS=yes
+PEERROUTES=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_PEERDNS=yes
+IPV6_PEERROUTES=yes
+IPV6_FAILURE_FATAL=no
+NAME=eno16777736
+UUID=ae0965e7-22b9-45aa-8ec9-3f0a20a85d11
+ONBOOT=yes  #开启自动启用网络连接
+IPADDR0=192.168.21.128  #设置IP地址
+PREFIXO0=24  #设置子网掩码
+GATEWAY0=192.168.21.2  #设置网关
+DNS1=8.8.8.8  #设置主DNS
+DNS2=8.8.4.4  #设置备DNS
+
+# 重启网络
+service network restart   
+```
