@@ -35,6 +35,23 @@ services:
       - "./conf/my.cnf:/etc/my.cnf"
       - "./init:/docker-entrypoint-initdb.d/"
 ```
+## my.cnf
+```
+[mysqld]
+user=mysql
+default-storage-engine=INNODB
+character-set-server=utf8
+max_connections=2000
+wait_timeout = 300
+interactive_timeout = 500
+lower_case_table_names=2
+[client]
+default-character-set=utf8
+[mysql]
+default-character-set=utf8
+```
+
+
 
 ## docker-compose(MySQL8)
 ```bash
@@ -59,6 +76,29 @@ services:
     volumes:
       - ./data:/var/lib/mysql
       - ./conf/my.cnf:/etc/mysql/my.cnf
+```
+
+## my.cnf
+
+```flow js
+[mysqld]
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+datadir         = /var/lib/mysql
+secure-file-priv= NULL
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+# add
+max_connections = 2000
+wait_timeout = 300
+interactive_timeout = 500
+
+lower_case_table_names=1
+
+sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+
+# Custom config should go here
+!includedir /etc/mysql/conf.d/
 ```
 
 ## 启动

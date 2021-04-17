@@ -143,6 +143,7 @@ module.exports = {
                     children: [
                         '/docker/nginx/',
                         '/docker/mysql/',
+                        '/docker/redis/',
                         '/docker/mongodb/',
                         '/docker/confluence/',
                         '/docker/sbt-scala-play/',
