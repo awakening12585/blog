@@ -144,9 +144,13 @@ module.exports = {
                         '/docker/nginx/',
                         '/docker/mysql/',
                         '/docker/redis/',
+                        '/docker/rocketmq/',
                         '/docker/mongodb/',
+                        '/docker/nacos/',
+                        '/docker/sentinel/',
                         '/docker/confluence/',
                         '/docker/sbt-scala-play/',
+                        '/docker/yapi/',
                     ]
                 },
             ],

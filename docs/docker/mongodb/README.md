@@ -22,6 +22,7 @@ services:
     ports:
       - "27017:27017"
     environment:
+      - TZ=Asia/Shanghai
       - MONGO_INITDB_ROOT_USERNAME=test
       - MONGO_INITDB_ROOT_PASSWORD=test123
       - MONGO_INITDB_DATABASE=cs
