@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>rocketMq | 早有觉悟</title>
+    <meta name="description" content="开始">
+    <link rel="icon" href="/blog/favicon.ico">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.1f478cd9.css" as="style"><link rel="preload" href="/blog/assets/js/app.c6a0e20f.js" as="script"><link rel="preload" href="/blog/assets/js/19.ba590e87.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.bf97e52d.js"><link rel="prefetch" href="/blog/assets/js/11.a498b246.js"><link rel="prefetch" href="/blog/assets/js/12.856aa61d.js"><link rel="prefetch" href="/blog/assets/js/13.7d8f8331.js"><link rel="prefetch" href="/blog/assets/js/14.cb4b7fce.js"><link rel="prefetch" href="/blog/assets/js/15.d50e41e9.js"><link rel="prefetch" href="/blog/assets/js/16.fd9be6fd.js"><link rel="prefetch" href="/blog/assets/js/17.93c57d6e.js"><link rel="prefetch" href="/blog/assets/js/18.93be17db.js"><link rel="prefetch" href="/blog/assets/js/2.8a2241f0.js"><link rel="prefetch" href="/blog/assets/js/20.c5a2540a.js"><link rel="prefetch" href="/blog/assets/js/21.bb64c560.js"><link rel="prefetch" href="/blog/assets/js/22.7701b9ed.js"><link rel="prefetch" href="/blog/assets/js/23.8a11c47a.js"><link rel="prefetch" href="/blog/assets/js/24.30b50f31.js"><link rel="prefetch" href="/blog/assets/js/25.d38803a1.js"><link rel="prefetch" href="/blog/assets/js/26.f7b8bd2d.js"><link rel="prefetch" href="/blog/assets/js/27.802c2702.js"><link rel="prefetch" href="/blog/assets/js/28.366eeeb0.js"><link rel="prefetch" href="/blog/assets/js/29.52e7d088.js"><link rel="prefetch" href="/blog/assets/js/3.95048b86.js"><link rel="prefetch" href="/blog/assets/js/30.111ffc3a.js"><link rel="prefetch" href="/blog/assets/js/31.f31c1598.js"><link rel="prefetch" href="/blog/assets/js/32.08fc7207.js"><link rel="prefetch" href="/blog/assets/js/33.46c6941e.js"><link rel="prefetch" href="/blog/assets/js/34.fad3b03c.js"><link rel="prefetch" href="/blog/assets/js/35.173a72c5.js"><link rel="prefetch" href="/blog/assets/js/36.b9f444c3.js"><link rel="prefetch" href="/blog/assets/js/37.1143f44b.js"><link rel="prefetch" href="/blog/assets/js/38.b009ad2e.js"><link rel="prefetch" href="/blog/assets/js/39.005a1991.js"><link rel="prefetch" href="/blog/assets/js/4.4c51fbb3.js"><link rel="prefetch" href="/blog/assets/js/40.9bec41c0.js"><link rel="prefetch" href="/blog/assets/js/41.7411c71f.js"><link rel="prefetch" href="/blog/assets/js/42.aa37ee99.js"><link rel="prefetch" href="/blog/assets/js/43.5f29a3cc.js"><link rel="prefetch" href="/blog/assets/js/44.8e4859d5.js"><link rel="prefetch" href="/blog/assets/js/45.a584ef1c.js"><link rel="prefetch" href="/blog/assets/js/46.97340da3.js"><link rel="prefetch" href="/blog/assets/js/47.7b06b391.js"><link rel="prefetch" href="/blog/assets/js/48.3e041161.js"><link rel="prefetch" href="/blog/assets/js/49.9627a7c7.js"><link rel="prefetch" href="/blog/assets/js/5.948e7a3c.js"><link rel="prefetch" href="/blog/assets/js/50.a1af66ed.js"><link rel="prefetch" href="/blog/assets/js/51.521efdb9.js"><link rel="prefetch" href="/blog/assets/js/52.7ed6cf2b.js"><link rel="prefetch" href="/blog/assets/js/53.64a97baa.js"><link rel="prefetch" href="/blog/assets/js/54.c92395c0.js"><link rel="prefetch" href="/blog/assets/js/55.75c42f8f.js"><link rel="prefetch" href="/blog/assets/js/56.e376196d.js"><link rel="prefetch" href="/blog/assets/js/57.45a5e30e.js"><link rel="prefetch" href="/blog/assets/js/58.4ad9cc85.js"><link rel="prefetch" href="/blog/assets/js/59.f4f99e42.js"><link rel="prefetch" href="/blog/assets/js/6.23e6df2a.js"><link rel="prefetch" href="/blog/assets/js/60.9837fa12.js"><link rel="prefetch" href="/blog/assets/js/61.1031cb70.js"><link rel="prefetch" href="/blog/assets/js/62.d96cbe08.js"><link rel="prefetch" href="/blog/assets/js/63.dab98ff9.js"><link rel="prefetch" href="/blog/assets/js/64.7897ff38.js"><link rel="prefetch" href="/blog/assets/js/7.e1131300.js"><link rel="prefetch" href="/blog/assets/js/8.2fe7de94.js"><link rel="prefetch" href="/blog/assets/js/9.55214cd9.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.1f478cd9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">早有觉悟</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/guide/markdown/" class="nav-link">导航</a></div><div class="nav-item"><a href="http://blog.zaoyoujuewu.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/awakening12585" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub地址
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/guide/markdown/" class="nav-link">导航</a></div><div class="nav-item"><a href="http://blog.zaoyoujuewu.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/awakening12585" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub地址
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading"><span>Docker 安装</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/blog/docker/" class="sidebar-link">安装 Docker</a></li><li><a href="/blog/docker/docker1/" class="sidebar-link">CentOS-安装-Docker</a></li><li><a href="/blog/docker/docker2/" class="sidebar-link">Ubuntu 安装 Docker</a></li><li><a href="/blog/docker/docker3/" class="sidebar-link">Docker 镜像加速器</a></li><li><a href="/blog/docker/docker5/" class="sidebar-link">修改docker默认存储地址</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>docker-compose</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/blog/docker/docker4/" class="sidebar-link">Docker Compose 安装与卸载</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>docker知识收集</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/blog/docker/docker6/" class="sidebar-link">Docker 创建镜像、修改、上传镜像</a></li><li><a href="/blog/docker/docker7/" class="sidebar-link">Docker ubuntu16.04离线安装 docker</a></li><li><a href="/blog/docker/docker8/" class="sidebar-link">docker 容器和宿主机时间同步设置</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>docker 部署</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/blog/docker/nginx/" class="sidebar-link">nginx</a></li><li><a href="/blog/docker/mysql/" class="sidebar-link">mysql</a></li><li><a href="/blog/docker/redis/" class="sidebar-link">redis</a></li><li><a href="/blog/docker/rocketmq/" class="active sidebar-link">rocketMq</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/docker/rocketmq/#创建目录" class="sidebar-link">创建目录</a></li><li class="sidebar-sub-header"><a href="/blog/docker/rocketmq/#路径约定" class="sidebar-link">路径约定</a></li><li class="sidebar-sub-header"><a href="/blog/docker/rocketmq/#docker-compose" class="sidebar-link">docker-compose</a></li><li class="sidebar-sub-header"><a href="/blog/docker/rocketmq/#broker-conf" class="sidebar-link">broker.conf</a></li><li class="sidebar-sub-header"><a href="/blog/docker/rocketmq/#启动" class="sidebar-link">启动</a></li><li class="sidebar-sub-header"><a href="/blog/docker/rocketmq/#访问" class="sidebar-link">访问</a></li></ul></li><li><a href="/blog/docker/mongodb/" class="sidebar-link">mongodb</a></li><li><a href="/blog/docker/nacos/" class="sidebar-link">nacos</a></li><li><a href="/blog/docker/sentinel/" class="sidebar-link">sentinel</a></li><li><a href="/blog/docker/confluence/" class="sidebar-link">confluence &amp; postgresql</a></li><li><a href="/blog/docker/sbt-scala-play/" class="sidebar-link">sbt-scala-play-mongodb-vue</a></li><li><a href="/blog/docker/yapi/" class="sidebar-link">yapi</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="rocketmq"><a href="#rocketmq" aria-hidden="true" class="header-anchor">#</a> rocketMq</h1> <h2 id="创建目录"><a href="#创建目录" aria-hidden="true" class="header-anchor">#</a> 创建目录</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">mkdir</span> -p /data/docker/rocketmq
+<span class="token builtin class-name">cd</span> /data/docker/rocketmq
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h2 id="路径约定"><a href="#路径约定" aria-hidden="true" class="header-anchor">#</a> 路径约定</h2> <ul><li>data
+<ul><li>brokerconf
+<ul><li>broker.conf</li></ul></li> <li>logs</li> <li>store</li></ul></li></ul> <h2 id="docker-compose"><a href="#docker-compose" aria-hidden="true" class="header-anchor">#</a> docker-compose</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>version: <span class="token string">'3.5'</span>
+services:
+  rmqnamesrv:
+    image: foxiswho/rocketmq:server
+    container_name: rmqnamesrv
+    ports:
+      - <span class="token number">9876</span>:9876
+    volumes:
+      - ./data/logs:/opt/logs
+      - ./data/store:/opt/store
+    networks:
+        rmq:
+          aliases:
+            - rmqnamesrv
+
+  rmqbroker:
+    image: foxiswho/rocketmq:broker
+    container_name: rmqbroker
+    ports:
+      - <span class="token number">10909</span>:10909
+      - <span class="token number">10911</span>:10911
+    volumes:
+      - ./data/logs:/opt/logs
+      - ./data/store:/opt/store
+      - ./data/brokerconf/broker.conf:/etc/rocketmq/broker.conf
+    environment:
+        NAMESRV_ADDR: <span class="token string">&quot;rmqnamesrv:9876&quot;</span>
+        JAVA_OPTS: <span class="token string">&quot; -Duser.home=/opt&quot;</span>
+        JAVA_OPT_EXT: <span class="token string">&quot;-server -Xms128m -Xmx128m -Xmn128m&quot;</span>
+    command: mqbroker -c /etc/rocketmq/broker.conf
+    depends_on:
+      - rmqnamesrv
+    networks:
+      rmq:
+        aliases:
+          - rmqbroker
+
+  rmqconsole:
+    image: styletang/rocketmq-console-ng
+    container_name: rmqconsole
+    ports:
+      - <span class="token number">8080</span>:8080
+    environment:
+        JAVA_OPTS: <span class="token string">&quot;-Drocketmq.namesrv.addr=rmqnamesrv:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false&quot;</span>
+    depends_on:
+      - rmqnamesrv
+    networks:
+      rmq:
+        aliases:
+          - rmqconsole
+
+networks:
+  rmq:
+    name: rmq
+    driver: bridge
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br></div></div><h2 id="broker-conf"><a href="#broker-conf" aria-hidden="true" class="header-anchor">#</a> broker.conf</h2> <div class="language- line-numbers-mode"><pre class="language-text"><code># Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the &quot;License&quot;); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+
+
+# 所属集群名字
+brokerClusterName=DefaultCluster
+
+# broker 名字，注意此处不同的配置文件填写的不一样，如果在 broker-a.properties 使用: broker-a,
+# 在 broker-b.properties 使用: broker-b
+brokerName=broker-a
+
+# 0 表示 Master，&gt; 0 表示 Slave
+brokerId=0
+
+# nameServer地址，分号分割
+# namesrvAddr=rocketmq-nameserver1:9876;rocketmq-nameserver2:9876
+
+# 启动IP,如果 docker 报 com.alibaba.rocketmq.remoting.exception.RemotingConnectException: connect to &lt;192.168.0.120:10909&gt; failed
+# 解决方式1 加上一句 producer.setVipChannelEnabled(false);，解决方式2 brokerIP1 设置宿主机IP，不要使用docker 内部IP
+# brokerIP1=192.168.0.253
+
+# 在发送消息时，自动创建服务器不存在的topic，默认创建的队列数
+defaultTopicQueueNums=4
+
+# 是否允许 Broker 自动创建 Topic，建议线下开启，线上关闭 ！！！这里仔细看是 false，false，false
+autoCreateTopicEnable=true
+
+# 是否允许 Broker 自动创建订阅组，建议线下开启，线上关闭
+autoCreateSubscriptionGroup=true
+
+# Broker 对外服务的监听端口
+listenPort=10911
+
+# 删除文件时间点，默认凌晨4点
+deleteWhen=04
+
+# 文件保留时间，默认48小时
+fileReservedTime=120
+
+# commitLog 每个文件的大小默认1G
+mapedFileSizeCommitLog=1073741824
+
+# ConsumeQueue 每个文件默认存 30W 条，根据业务情况调整
+mapedFileSizeConsumeQueue=300000
+
+# destroyMapedFileIntervalForcibly=120000
+# redeleteHangedFileInterval=120000
+# 检测物理文件磁盘空间
+diskMaxUsedSpaceRatio=88
+# 存储路径
+# storePathRootDir=/home/ztztdata/rocketmq-all-4.1.0-incubating/store
+# commitLog 存储路径
+# storePathCommitLog=/home/ztztdata/rocketmq-all-4.1.0-incubating/store/commitlog
+# 消费队列存储
+# storePathConsumeQueue=/home/ztztdata/rocketmq-all-4.1.0-incubating/store/consumequeue
+# 消息索引存储路径
+# storePathIndex=/home/ztztdata/rocketmq-all-4.1.0-incubating/store/index
+# checkpoint 文件存储路径
+# storeCheckpoint=/home/ztztdata/rocketmq-all-4.1.0-incubating/store/checkpoint
+# abort 文件存储路径
+# abortFile=/home/ztztdata/rocketmq-all-4.1.0-incubating/store/abort
+# 限制的消息大小
+maxMessageSize=65536
+
+# flushCommitLogLeastPages=4
+# flushConsumeQueueLeastPages=2
+# flushCommitLogThoroughInterval=10000
+# flushConsumeQueueThoroughInterval=60000
+
+# Broker 的角色
+# - ASYNC_MASTER 异步复制Master
+# - SYNC_MASTER 同步双写Master
+# - SLAVE
+brokerRole=ASYNC_MASTER
+
+# 刷盘方式
+# - ASYNC_FLUSH 异步刷盘
+# - SYNC_FLUSH 同步刷盘
+flushDiskType=ASYNC_FLUSH
+
+# 发消息线程池数量
+# sendMessageThreadPoolNums=128
+# 拉消息线程池数量
+# pullMessageThreadPoolNums=128
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br></div></div><h2 id="启动"><a href="#启动" aria-hidden="true" class="header-anchor">#</a> 启动</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>docker-compose up
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="访问"><a href="#访问" aria-hidden="true" class="header-anchor">#</a> 访问</h2> <p>访问 http://rmqIP:8080 登入控制台</p></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">4/19/2021, 6:21:00 PM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/blog/docker/redis/" class="prev">
+          redis
+        </a></span> <span class="next"><a href="/blog/docker/mongodb/">
+          mongodb
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/blog/assets/js/app.c6a0e20f.js" defer></script><script src="/blog/assets/js/19.ba590e87.js" defer></script>
+  </body>
+</html>

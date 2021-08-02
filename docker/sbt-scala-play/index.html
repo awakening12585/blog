@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>sbt-scala-play-mongodb-vue | 早有觉悟</title>
+    <meta name="description" content="开始">
+    <link rel="icon" href="/blog/favicon.ico">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.1f478cd9.css" as="style"><link rel="preload" href="/blog/assets/js/app.c6a0e20f.js" as="script"><link rel="preload" href="/blog/assets/js/20.c5a2540a.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.bf97e52d.js"><link rel="prefetch" href="/blog/assets/js/11.a498b246.js"><link rel="prefetch" href="/blog/assets/js/12.856aa61d.js"><link rel="prefetch" href="/blog/assets/js/13.7d8f8331.js"><link rel="prefetch" href="/blog/assets/js/14.cb4b7fce.js"><link rel="prefetch" href="/blog/assets/js/15.d50e41e9.js"><link rel="prefetch" href="/blog/assets/js/16.fd9be6fd.js"><link rel="prefetch" href="/blog/assets/js/17.93c57d6e.js"><link rel="prefetch" href="/blog/assets/js/18.93be17db.js"><link rel="prefetch" href="/blog/assets/js/19.ba590e87.js"><link rel="prefetch" href="/blog/assets/js/2.8a2241f0.js"><link rel="prefetch" href="/blog/assets/js/21.bb64c560.js"><link rel="prefetch" href="/blog/assets/js/22.7701b9ed.js"><link rel="prefetch" href="/blog/assets/js/23.8a11c47a.js"><link rel="prefetch" href="/blog/assets/js/24.30b50f31.js"><link rel="prefetch" href="/blog/assets/js/25.d38803a1.js"><link rel="prefetch" href="/blog/assets/js/26.f7b8bd2d.js"><link rel="prefetch" href="/blog/assets/js/27.802c2702.js"><link rel="prefetch" href="/blog/assets/js/28.366eeeb0.js"><link rel="prefetch" href="/blog/assets/js/29.52e7d088.js"><link rel="prefetch" href="/blog/assets/js/3.95048b86.js"><link rel="prefetch" href="/blog/assets/js/30.111ffc3a.js"><link rel="prefetch" href="/blog/assets/js/31.f31c1598.js"><link rel="prefetch" href="/blog/assets/js/32.08fc7207.js"><link rel="prefetch" href="/blog/assets/js/33.46c6941e.js"><link rel="prefetch" href="/blog/assets/js/34.fad3b03c.js"><link rel="prefetch" href="/blog/assets/js/35.173a72c5.js"><link rel="prefetch" href="/blog/assets/js/36.b9f444c3.js"><link rel="prefetch" href="/blog/assets/js/37.1143f44b.js"><link rel="prefetch" href="/blog/assets/js/38.b009ad2e.js"><link rel="prefetch" href="/blog/assets/js/39.005a1991.js"><link rel="prefetch" href="/blog/assets/js/4.4c51fbb3.js"><link rel="prefetch" href="/blog/assets/js/40.9bec41c0.js"><link rel="prefetch" href="/blog/assets/js/41.7411c71f.js"><link rel="prefetch" href="/blog/assets/js/42.aa37ee99.js"><link rel="prefetch" href="/blog/assets/js/43.5f29a3cc.js"><link rel="prefetch" href="/blog/assets/js/44.8e4859d5.js"><link rel="prefetch" href="/blog/assets/js/45.a584ef1c.js"><link rel="prefetch" href="/blog/assets/js/46.97340da3.js"><link rel="prefetch" href="/blog/assets/js/47.7b06b391.js"><link rel="prefetch" href="/blog/assets/js/48.3e041161.js"><link rel="prefetch" href="/blog/assets/js/49.9627a7c7.js"><link rel="prefetch" href="/blog/assets/js/5.948e7a3c.js"><link rel="prefetch" href="/blog/assets/js/50.a1af66ed.js"><link rel="prefetch" href="/blog/assets/js/51.521efdb9.js"><link rel="prefetch" href="/blog/assets/js/52.7ed6cf2b.js"><link rel="prefetch" href="/blog/assets/js/53.64a97baa.js"><link rel="prefetch" href="/blog/assets/js/54.c92395c0.js"><link rel="prefetch" href="/blog/assets/js/55.75c42f8f.js"><link rel="prefetch" href="/blog/assets/js/56.e376196d.js"><link rel="prefetch" href="/blog/assets/js/57.45a5e30e.js"><link rel="prefetch" href="/blog/assets/js/58.4ad9cc85.js"><link rel="prefetch" href="/blog/assets/js/59.f4f99e42.js"><link rel="prefetch" href="/blog/assets/js/6.23e6df2a.js"><link rel="prefetch" href="/blog/assets/js/60.9837fa12.js"><link rel="prefetch" href="/blog/assets/js/61.1031cb70.js"><link rel="prefetch" href="/blog/assets/js/62.d96cbe08.js"><link rel="prefetch" href="/blog/assets/js/63.dab98ff9.js"><link rel="prefetch" href="/blog/assets/js/64.7897ff38.js"><link rel="prefetch" href="/blog/assets/js/7.e1131300.js"><link rel="prefetch" href="/blog/assets/js/8.2fe7de94.js"><link rel="prefetch" href="/blog/assets/js/9.55214cd9.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.1f478cd9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">早有觉悟</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/guide/markdown/" class="nav-link">导航</a></div><div class="nav-item"><a href="http://blog.zaoyoujuewu.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/awakening12585" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub地址
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/guide/markdown/" class="nav-link">导航</a></div><div class="nav-item"><a href="http://blog.zaoyoujuewu.cn/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/awakening12585" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub地址
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading"><span>Docker 安装</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/blog/docker/" class="sidebar-link">安装 Docker</a></li><li><a href="/blog/docker/docker1/" class="sidebar-link">CentOS-安装-Docker</a></li><li><a href="/blog/docker/docker2/" class="sidebar-link">Ubuntu 安装 Docker</a></li><li><a href="/blog/docker/docker3/" class="sidebar-link">Docker 镜像加速器</a></li><li><a href="/blog/docker/docker5/" class="sidebar-link">修改docker默认存储地址</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>docker-compose</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/blog/docker/docker4/" class="sidebar-link">Docker Compose 安装与卸载</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading"><span>docker知识收集</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/blog/docker/docker6/" class="sidebar-link">Docker 创建镜像、修改、上传镜像</a></li><li><a href="/blog/docker/docker7/" class="sidebar-link">Docker ubuntu16.04离线安装 docker</a></li><li><a href="/blog/docker/docker8/" class="sidebar-link">docker 容器和宿主机时间同步设置</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>docker 部署</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/blog/docker/nginx/" class="sidebar-link">nginx</a></li><li><a href="/blog/docker/mysql/" class="sidebar-link">mysql</a></li><li><a href="/blog/docker/redis/" class="sidebar-link">redis</a></li><li><a href="/blog/docker/rocketmq/" class="sidebar-link">rocketMq</a></li><li><a href="/blog/docker/mongodb/" class="sidebar-link">mongodb</a></li><li><a href="/blog/docker/nacos/" class="sidebar-link">nacos</a></li><li><a href="/blog/docker/sentinel/" class="sidebar-link">sentinel</a></li><li><a href="/blog/docker/confluence/" class="sidebar-link">confluence &amp; postgresql</a></li><li><a href="/blog/docker/sbt-scala-play/" class="active sidebar-link">sbt-scala-play-mongodb-vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/docker/sbt-scala-play/#路径约定" class="sidebar-link">路径约定</a></li><li class="sidebar-sub-header"><a href="/blog/docker/sbt-scala-play/#dockerfile-sbt-scala-play-项目镜像制作" class="sidebar-link">Dockerfile (sbt-scala-play 项目镜像制作)</a></li><li class="sidebar-sub-header"><a href="/blog/docker/sbt-scala-play/#docker-compose-yml" class="sidebar-link">docker-compose.yml</a></li><li class="sidebar-sub-header"><a href="/blog/docker/sbt-scala-play/#cs-conf" class="sidebar-link">cs.conf</a></li><li class="sidebar-sub-header"><a href="/blog/docker/sbt-scala-play/#play-配置跨域-options-访问" class="sidebar-link">play 配置跨域 options 访问</a></li><li class="sidebar-sub-header"><a href="/blog/docker/sbt-scala-play/#play-配置请求头" class="sidebar-link">play 配置请求头</a></li></ul></li><li><a href="/blog/docker/yapi/" class="sidebar-link">yapi</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="sbt-scala-play-mongodb-vue"><a href="#sbt-scala-play-mongodb-vue" aria-hidden="true" class="header-anchor">#</a> sbt-scala-play-mongodb-vue</h1> <p>使用docker-compose 部署 sbt-scala-play-mongodb-vue 项目</p> <h2 id="路径约定"><a href="#路径约定" aria-hidden="true" class="header-anchor">#</a> 路径约定</h2> <ul><li>cs 目录:后端项目
+<ul><li>conf 目录:后端项目配置文件</li></ul></li> <li>nginx 目录: nginx 相关文件</li> <li>mongodb 目录: 数据库</li> <li>docker-compose.yml 文件</li></ul> <h2 id="dockerfile-sbt-scala-play-项目镜像制作"><a href="#dockerfile-sbt-scala-play-项目镜像制作" aria-hidden="true" class="header-anchor">#</a> Dockerfile (sbt-scala-play 项目镜像制作)</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>FROM ysihaoy/scala-play:2.12.2-2.6.0-sbt-0.13.15
+
+<span class="token comment"># caching dependencies</span>
+COPY <span class="token punctuation">[</span><span class="token string">&quot;build.sbt&quot;</span>, <span class="token string">&quot;/tmp/build/&quot;</span><span class="token punctuation">]</span>
+COPY <span class="token punctuation">[</span><span class="token string">&quot;project/plugins.sbt&quot;</span>, <span class="token string">&quot;project/build.properties&quot;</span>, <span class="token string">&quot;/tmp/build/project/&quot;</span><span class="token punctuation">]</span>
+RUN <span class="token builtin class-name">cd</span> /tmp/build <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>
+ sbt compile <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>
+ sbt test:compile <span class="token operator">&amp;&amp;</span> <span class="token punctuation">\</span>
+ <span class="token function">rm</span> -rf /tmp/build
+
+<span class="token comment"># copy code</span>
+COPY <span class="token builtin class-name">.</span> /root/app/
+WORKDIR /root/app
+RUN sbt compile <span class="token operator">&amp;&amp;</span> sbt test:compile
+
+EXPOSE <span class="token number">9000</span>
+CMD <span class="token punctuation">[</span><span class="token string">&quot;sbt run&quot;</span><span class="token punctuation">]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><h2 id="docker-compose-yml"><a href="#docker-compose-yml" aria-hidden="true" class="header-anchor">#</a> docker-compose.yml</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>version: <span class="token string">&quot;3&quot;</span>
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: ng
+    restart: always
+    ports:
+      - <span class="token string">&quot;80:80&quot;</span>
+      - <span class="token string">&quot;443:443&quot;</span>
+    volumes:
+      - /data/excel:/data/excel:rw
+      - ./nginx/www/:/var/www/html/:rw
+      - ./nginx/conf/conf.d:/etc/nginx/conf.d/:ro
+      - ./nginx/conf/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/log/:/var/log/nginxlog/:rw
+    networks:
+      nn:
+        ipv4_address: <span class="token number">192.168</span>.5.101
+
+
+  redis-server:
+    image: redis:latest
+    container_name: rd
+    ports:
+      - <span class="token number">6379</span>:6379
+    restart: always
+    networks:
+      nn:
+        ipv4_address: <span class="token number">192.168</span>.5.102
+        
+  mongo:
+    image: mongo:4.0.1
+    container_name: md
+    ports:
+      - <span class="token string">&quot;27017:27017&quot;</span>
+    environment:
+      - <span class="token assign-left variable">MONGO_INITDB_ROOT_USERNAME</span><span class="token operator">=</span>test
+      - <span class="token assign-left variable">MONGO_INITDB_ROOT_PASSWORD</span><span class="token operator">=</span>test123
+      - <span class="token assign-left variable">MONGO_INITDB_DATABASE</span><span class="token operator">=</span>cs
+    volumes:
+      - <span class="token string">&quot;./mongodb/data/db/:/data/db&quot;</span>
+      - <span class="token string">&quot;./mongodb/setup:/docker-entrypoint-initdb.d/&quot;</span>
+    command: <span class="token punctuation">[</span><span class="token string">&quot;mongod&quot;</span>,<span class="token string">&quot;--bind_ip&quot;</span>,<span class="token string">&quot;0.0.0.0&quot;</span><span class="token punctuation">]</span>
+    networks:
+      nn:
+        ipv4_address: <span class="token number">192.168</span>.5.103
+
+  cs:
+    image: cs:1.0.1
+    container_name: cs
+    ports:
+      - <span class="token string">&quot;9000:9000&quot;</span>
+    volumes:
+      - ./cs/conf:/root/app/conf
+      - /data/excel:/data/excel:rw
+    command:
+      - <span class="token function">sh</span>
+      - -c
+      - <span class="token function">ls</span> <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> /root/app <span class="token operator">&amp;&amp;</span> sbt compile <span class="token operator">&amp;&amp;</span> sbt run
+    tty: <span class="token boolean">true</span>
+    depends_on:
+      - mongo
+    networks:
+      nn:
+        ipv4_address: <span class="token number">192.168</span>.5.104
+
+  cs_schedule:
+    image: cs_schedule:1.0.0
+    container_name: cs_schedule
+    ports:
+      - <span class="token string">&quot;9001:9000&quot;</span>
+    volumes:
+      - ./cs_schedule/conf:/root/app/conf
+    command:
+      - <span class="token function">sh</span>
+      - -c
+      - <span class="token function">ls</span> <span class="token operator">&amp;&amp;</span> <span class="token builtin class-name">cd</span> /root/app <span class="token operator">&amp;&amp;</span> sbt compile <span class="token operator">&amp;&amp;</span> sbt run
+    tty: <span class="token boolean">true</span>
+    depends_on:
+      - mongo
+    networks:
+      nn:
+        ipv4_address: <span class="token number">192.168</span>.5.105
+
+networks:
+  nn:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: <span class="token number">192.168</span>.5.0/24
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br></div></div><h2 id="cs-conf"><a href="#cs-conf" aria-hidden="true" class="header-anchor">#</a> cs.conf</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>
+server <span class="token punctuation">{</span>
+    listen       <span class="token number">80</span><span class="token punctuation">;</span>
+    server_name  leads.taoche360.cn<span class="token punctuation">;</span>
+    root   /var/www/html/cs<span class="token punctuation">;</span>
+    index  index.html index.htm<span class="token punctuation">;</span>
+    <span class="token comment">#charset koi8-r;</span>
+
+    <span class="token comment">#access_log /dev/null;</span>
+    access_log  /var/log/nginxlog/nginx.cs.access.log  main<span class="token punctuation">;</span>
+    error_log  /var/log/nginxlog/nginx.cs.error.log  warn<span class="token punctuation">;</span>
+
+    <span class="token comment">#error_page  404              /404.html;</span>
+
+    <span class="token comment"># redirect server error pages to the static page /50x.html</span>
+    <span class="token comment">#</span>
+    error_page   <span class="token number">500</span> <span class="token number">502</span> <span class="token number">503</span> <span class="token number">504</span>  /50x.html<span class="token punctuation">;</span>
+    location <span class="token operator">=</span> /50x.html <span class="token punctuation">{</span>
+        root   /usr/share/nginx/html<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    location / <span class="token punctuation">{</span>
+       <span class="token comment">#root   html;</span>
+       <span class="token comment">#index  index.html index.htm;</span>
+       <span class="token comment">#动态页面</span>
+       <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token operator">!</span>-e <span class="token variable">$request_filename</span> <span class="token punctuation">)</span><span class="token punctuation">{</span>
+            proxy_pass    http://192.168.5.104:9000<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    location ^~// <span class="token punctuation">{</span>
+                proxy_pass   http://192.168.5.104:9000<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    location ^~ /data/excel <span class="token punctuation">{</span>
+                <span class="token builtin class-name">alias</span> /data/excel/<span class="token punctuation">;</span>
+                autoindex on<span class="token punctuation">;</span>
+                autoindex_exact_size off<span class="token punctuation">;</span>
+                autoindex_localtime on<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h2 id="play-配置跨域-options-访问"><a href="#play-配置跨域-options-访问" aria-hidden="true" class="header-anchor">#</a> play 配置跨域 options 访问</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>play.filters.enabled <span class="token operator">+=</span> <span class="token string">&quot;play.filters.cors.CORSFilter&quot;</span>
+
+play.filters.cors <span class="token punctuation">{</span>
+  pathPrefixes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">]</span>
+  allowedOrigins <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;http://**.**.cn&quot;</span><span class="token punctuation">]</span>
+  allowedHttpMethods <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;GET&quot;</span>, <span class="token string">&quot;POST&quot;</span> ,<span class="token string">&quot;OPTIONS&quot;</span><span class="token punctuation">]</span>
+  allowedHttpHeaders <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;Accept&quot;</span><span class="token punctuation">]</span>
+  preflightMaxAge <span class="token operator">=</span> <span class="token number">1</span> days
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><h2 id="play-配置请求头"><a href="#play-配置请求头" aria-hidden="true" class="header-anchor">#</a> play 配置请求头</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>play.filters.csrf.header.bypassHeaders <span class="token punctuation">{</span>
+  X-XSRF-TOKEN <span class="token operator">=</span> <span class="token string">&quot;*&quot;</span>
+  Security-Magic <span class="token operator">=</span> <span class="token string">&quot;true&quot;</span>
+  Csrf-Token <span class="token operator">=</span> <span class="token string">&quot;nocheck&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></div> <div class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">9/16/2019, 11:23:11 AM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/blog/docker/confluence/" class="prev">
+          confluence &amp; postgresql
+        </a></span> <span class="next"><a href="/blog/docker/yapi/">
+          yapi
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/blog/assets/js/app.c6a0e20f.js" defer></script><script src="/blog/assets/js/20.c5a2540a.js" defer></script>
+  </body>
+</html>
