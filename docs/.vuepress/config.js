@@ -207,6 +207,13 @@ module.exports = {
             ],
             '/mongodb/': [
                 {
+                    title: '基础学习',
+                    collapsable: false,
+                    children: [
+                        '/mongodb/base/anzhuang/',
+                    ]
+                },
+                {
                     title: '常见操作',
                     collapsable: false,
                     children: [
