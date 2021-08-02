@@ -211,6 +211,7 @@ module.exports = {
                     collapsable: false,
                     children: [
                         '/mongodb/base/anzhuang/',
+                        '/mongodb/base/rs/',
                     ]
                 },
                 {
